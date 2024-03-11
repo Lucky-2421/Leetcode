@@ -13,7 +13,7 @@ public:
             if (mp.find(order[i])!=mp.end()){
                 int n=mp[order[i]];
                 
-                while(n-- ){
+                while(n-- ){ // those number of times the char is present in s
                 mp[order[i]]--;
                 ans+=order[i];
                 }
@@ -23,7 +23,7 @@ public:
         for (auto it:mp){
             if (it.second!=0){
                 int n=it.second;
-                while(n--){
+                while(n--){ // we have to include all the rest string that is stay in s 
                     ans+=it.first;    
                 }
                 
@@ -33,9 +33,5 @@ public:
         
        return ans;
     }
-/*
-"hucw"
-"utzoampdgkalexslxoqfkdjoczajxtuhqyxvlfatmptqdsochtdzgypsfkgqwbgqbcamdqnqztaqhqanirikahtmalzqjjxtqfnh"
-*/
-    
+
 };
